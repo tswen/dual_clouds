@@ -1,0 +1,19 @@
+# Config file
+.settings
+.project
+.cproject
+
+# IDF compile output
+examples/*/build/*
+
+# config
+sdkconfig
+sdkconfig.old
+
+# VS Code Settings
+.vscode/
+
+# Test
+config/mass_mfg/my_single_mfg_config.csv
+config/mass_mfg/my_single_mfg.bin
+
