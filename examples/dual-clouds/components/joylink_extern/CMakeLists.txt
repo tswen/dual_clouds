@@ -8,6 +8,6 @@ file(GLOB_RECURSE srcs *.c)
 
 set(COMPONENT_SRCS ${srcs})
 
-set(COMPONENT_REQUIRES )
+set(COMPONENT_REQUIRES "lightbulb")
 
 register_component()
