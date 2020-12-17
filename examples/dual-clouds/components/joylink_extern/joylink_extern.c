@@ -25,6 +25,7 @@
 #include "joylink_log.h"
 #include "joylink_time.h"
 #include "joylink_dev.h"
+#include "joylink_light.h"
 
 #include "esp_tls.h"
 #include "tcpip_adapter.h"
@@ -537,7 +538,7 @@ joylink_dev_get_snap_shot_with_retcode(int32_t ret_code, char *out_snap, int32_t
 	joylink_dev_user_data_get(&user_dev);
 
     if((user_dev.Power != power_last) || (user_dev.AmbientLight != ambientLight_last)) {
-        // lightbulb_Control(user_dev);
+        lightbulb_Control(user_dev);
         power_last = user_dev.Power;
         ambientLight_last = user_dev.AmbientLight;
     }

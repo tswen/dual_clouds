@@ -22,6 +22,8 @@
 #include "nvs_flash.h"
 
 #include "conn_mgr.h"
+#include "lightbulb.h"
+
 #include "app_joylink.h"
 #include "app_ali_smartliving.h"
 
@@ -29,6 +31,8 @@ void app_main(void)
 {
     nvs_flash_init();
     app_wifi_init();
+
+    lightbulb_init();
 
     joylink_main();
 }

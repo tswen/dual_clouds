@@ -14,6 +14,7 @@ int HAL_Snprintf(char *str, const int len, const char *fmt, ...);
 
 #include "esp_log.h"
 #include "esp_system.h"
+#include "lightbulb.h"
 
 static const char* TAG = "linkkit_example_solo";
 
@@ -126,6 +127,9 @@ static int user_property_set_event_handler(const int devid, const char *request,
     CJSON *root = NULL, *LightSwitch = NULL, *LightColor = NULL;
     ESP_LOGI(TAG,"Property Set Received, Devid: %d, Request: %s", devid, request);
     
+    lightbulb_set_brightness(78);
+    lightbulb_set_saturation(100);
+    
     if (!request) {
         return NULL_VALUE_ERROR;
     }
@@ -140,15 +144,18 @@ static int user_property_set_event_handler(const int devid, const char *request,
     /** Switch lightbulb On/Off   */
     LightSwitch = CJSON_GetObjectItem(root, "powerstate");
     if (LightSwitch) {
-
+        lightbulb_set_on(LightSwitch->valueint);
     } 
 
     /** Switch lightbulb Hue */
     LightSwitch = CJSON_GetObjectItem(root, "HSVColor");
     if (LightSwitch) {
         LightColor = CJSON_GetObjectItem(LightSwitch, "Saturation");
+        lightbulb_set_saturation(LightColor ? LightColor->valueint : 100);
         LightColor = CJSON_GetObjectItem(LightSwitch, "Hue");
+        lightbulb_set_hue(LightColor ? LightColor->valueint : 120);
         LightColor = CJSON_GetObjectItem(LightSwitch, "Value");
+        lightbulb_set_brightness(LightColor ? LightColor->valueint : 0);
     }
     
     CJSON_Delete(root);
