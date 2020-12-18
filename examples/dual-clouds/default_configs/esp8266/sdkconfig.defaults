@@ -9,8 +9,8 @@ CONFIG_ESPTOOLPY_FLASHSIZE_2MB=y
 # Partition Table
 #
 CONFIG_PARTITION_TABLE_CUSTOM=y
-CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="default_configs/esp8266/joylink_demo.csv"
-CONFIG_PARTITION_TABLE_FILENAME="default_configs/esp8266/joylink_demo.csv"
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="default_configs/esp8266/partitions_esp8266.csv"
+CONFIG_PARTITION_TABLE_FILENAME="default_configs/esp8266/partitions_esp8266.csv"
 
 
 CONFIG_ENABLE_PTHREAD=y

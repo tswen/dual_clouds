@@ -9,8 +9,8 @@ CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
 # Partition Table
 #
 CONFIG_PARTITION_TABLE_CUSTOM=y
-CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="default_configs/esp32s2/joylink_demo.csv"
-CONFIG_PARTITION_TABLE_FILENAME="default_configs/esp32s2/joylink_demo.csv"
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="default_configs/esp32s2/partitions_esp32s2.csv"
+CONFIG_PARTITION_TABLE_FILENAME="default_configs/esp32s2/partitions_esp32s2.csv"
 
 #
 # Wi-Fi
