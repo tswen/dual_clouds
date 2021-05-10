@@ -4,12 +4,12 @@
 
 1. [介绍](#Introduction)
 2. [硬件准备](#hardwareprepare)
-3. [平台准备](#Platform preparation)
-4. [环境搭建](#Environment setup)
-5. [SDK 准备](#SDK preparation)
-6. [编译 & 烧写](#Compile and flash)
-7. [开发指南](#Development Guide)
-8. [相关链接](#Related Links)
+3. [平台准备](#Platform_preparation)
+4. [环境搭建](#Environment_setup)
+5. [SDK 准备](#SDK_preparation)
+6. [编译 & 烧写](#Compile_flash)
+7. [开发指南](#Development_Guide)
+8. [相关链接](#Related_Links)
 
 ## <span id = "Introduction">1.介绍</span>
 
@@ -31,7 +31,7 @@
 - **USB 线**
   连接 PC 和 ESP 设备，用来烧写/下载程序，查看 log 等。
 
-## <span id = "Platform preparation">3.平台准备</span>
+## <span id = "Platform_preparation">3.平台准备</span>
 
 Joylink 云平台准备：用户可通过在[小京鱼平台](http://smartdev.jd.com/)创建自己的设备，以获取设备连接云端的`uuid`, `private key`, `public key`, `device MAC`。
 
@@ -73,7 +73,7 @@ Ali-Smartliving 云平台准备：根据[生活物联网平台官方文档](http
 
 同时用户还需在移动设备端安装 [小京鱼 APP](https://smartdev.jd.com/docCenterDownload/list/2) 以及 [云智能 APP](https://help.aliyun.com/document_detail/125620.html?spm=a2c4g.11186623.6.565.16f46f67XEEN1k)
 
-## <span id ="Environment setup">4.环境搭建</span>
+## <span id ="Environment_setup">4.环境搭建</span>
 
 **如果您熟悉 ESP 开发环境，可以很顺利理解下面步骤; 如果您不熟悉某个部分，比如编译，烧录，需要您结合官方的相关文档来理解。如您需阅读 [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/zh_CN/v4.2/index.html)文档等。**
 
@@ -95,7 +95,7 @@ esptool 功能参考:
 $ ./components/esptool_py/esptool/esptool.py --help
 ```
 
-## <span id = "SDK preparation">5.SDK准备</span>
+## <span id = "SDK_preparation">5.SDK准备</span>
 
 - ESP32 & ESP32S2 平台: [ESP-IDF](https://github.com/espressif/esp-idf)
 - ESP8266 平台: [ESP8266_RTOS_SDK](https://github.com/espressif/ESP8266_RTOS_SDK)
@@ -106,7 +106,7 @@ $ ./components/esptool_py/esptool/esptool.py --help
 >
 > ESP32-S2 平台，需使用 ESP-IDF v4.2 及之后的版本，推荐使用 ESP-IDF v4.2
 
-## <span id = "Compile and flash">6.编译 & 烧写</span>
+## <span id = "Compile_flash">6.编译 & 烧写</span>
 
 ### 6.1 编译
 
@@ -207,7 +207,7 @@ idf.py -p (PORT) flash
 
 参考 [量产说明](./config/mass_mfg/README.md) 文档烧录三元组 NVS 分区。
 
-## <span id = "Development Guide">7.开发指南</span>
+## <span id = "Development_Guide">7.开发指南</span>
 
 ### 7.1 文件结构
 
@@ -283,7 +283,7 @@ idf.py -p (PORT) flash
 
 若用户暂时无法使用小京鱼 APP 为设备配网，用户可以在设备等待配网连接时短按 boot 按键来切换配网模式，此时设备将切换至 Ali 一键配网模式，用户可通过云智能 APP 来为设备进行配网。
 
-## <span id = "Related Links">8. 相关链接</span>
+## <span id = "Related_Links">8. 相关链接</span>
 
 - Espressif 官网： [http://espressif.com](http://espressif.com/)
 - ESP32 SDK 下载： https://github.com/espressif/esp-idf
